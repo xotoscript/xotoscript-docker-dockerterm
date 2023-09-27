@@ -1,0 +1,34 @@
+version: "3.9"
+services:
+  dockerterm:
+    container_name: dockerterm
+    image: dockerterm_dockerterm
+
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+
+        # PROFILE
+        EMAIL: ${EMAIL}
+        NAME: ${NAME}
+        USER_NAME: ${USER_NAME}
+        USER_GROUP: ${USER_GROUP}
+
+        # VERSIONS
+        NVM_VERSION: ${NVM_VERSION}
+        YARN_VERSION: ${YARN_VERSION}
+        POSTGRES_VERSION: ${POSTGRES_VERSION}
+        NEOVIM_VERSION: ${NEOVIM_VERSION}
+        JAVA_VERSION: ${JAVA_VERSION}
+        RUBBY_VERSION: ${RUBBY_VERSION}
+        NERDS_FONT_VERSION: ${NERDS_FONT_VERSION}
+        FZF_VERSION: ${FZF_VERSION}
+        REPO_PATH: ${REPO_PATH}
+        GITSTATUS_VERSION: ${GITSTATUS_VERSION}
+
+    ports:
+      - "58897:22"
+
+    env_file:
+      - .env

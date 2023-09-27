@@ -1,0 +1,9 @@
+{
+  "editor.rulers": [80],
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "cSpell.words": [ "Fira", "Fura", "Markdownlint", "aifrak", "anson", "copyfile", "david", "dirhistory", "dockerized", "esbenp", "fkirc", "gitstatusd", "globalias", "hadolint", "powerlevel", "pytest" ],
+  "markdownlint.config": { "MD013": true }
+}

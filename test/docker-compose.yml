@@ -1,0 +1,12 @@
+version: "3"
+services:
+  testserv:
+    build:
+      context: ./docker
+      dockerfile: Dockerfile
+    # volumes:
+    #   - .:/app
+    depends_on:
+      - dockerterm_dockerterm
+  dockerterm_dockerterm:
+    image: dockerterm_dockerterm

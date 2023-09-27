@@ -1,0 +1,15 @@
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "ms-azuretools.vscode-docker",
+    "exiasr.hadolint",
+    "spmeesseman.vscode-taskexplorer",
+    "cschleiden.vscode-github-actions",
+    "redhat.vscode-yaml",
+    "davidanson.vscode-markdownlint",
+    "shd101wyy.markdown-preview-enhanced",
+    "yzhang.markdown-all-in-one",
+    "esbenp.prettier-vscode"
+  ],
+  "unwantedRecommendations": []
+}

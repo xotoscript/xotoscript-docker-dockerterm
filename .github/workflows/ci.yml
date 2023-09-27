@@ -1,0 +1,30 @@
+name: CI For Docker Testing
+
+on:
+  push:
+    branches:
+      - development
+  pull_request:
+    branches:
+      - development
+
+jobs:
+  test:
+    name: Run pytests on Docker
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Build Docker Compose
+        run: sudo docker-compose build
+
+      - name: List Docker Images
+        run: docker images
+
+      - name: Build Docker Container For Tests
+        run: sudo docker-compose -f test/docker-compose.yml build
+
+      - name: Run Tests on Test Container Service
+        run: sudo docker-compose -f test/docker-compose.yml run --rm testserv
